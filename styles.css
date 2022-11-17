@@ -55,7 +55,69 @@ main {
     display: grid;
     border-top: 1px solid #292232;
     height: 70%;
+    grid-template-columns: 220px 440px 220px;
+    justify-content: center;
+    padding: 50px;
 }
+
+.card {
+    background-color: #292232;
+    -webkit-column-break-inside: avoid;
+    color: white;
+    border: 1px solid white;
+}
+.card span {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+.card:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    
+}
+.card:first-child:hover {
+    transform: rotate3d(0, 1, 0, 360deg);
+    transition: 1s ease-out;
+}
+
+
+.card:nth-child(2) {
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr;
+    background-color: transparent;
+    row-gap: 2px;
+}
+.card:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card:nth-child(3):hover {
+    transform: rotate3d(0, 1, 0, -360deg);
+    transition: 1s ease-out;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #292232;
+
+}
+
+.row:first-child:hover {
+    transform: rotate3d(1, 0, 0, -360deg);
+    transition: 1s ease-out;
+}
+
+.row:nth-child(2):hover {
+    transform: rotate3d(1, 0, 0, 360deg);
+    transition: 1s ease-out;
+}
+
 .info-section {
     display: flex;
     flex-wrap: wrap;
